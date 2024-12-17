@@ -1,76 +1,26 @@
-# Task Manager with User Authentication and Task Management Features
+### Objectives:
+1. **User Authentication System**:
+   - **Registration**: Users can register with a unique username and a hashed password.
+   - **Login**: Users log in with their credentials to access the task manager.
 
-## High-Level Overview
+2. **Task Management System**:
+   - **Add Tasks**: Users can add tasks with a description and a unique ID.
+   - **View Tasks**: Users can view all their tasks, showing the ID, description, and status (Pending or Completed).
+   - **Mark Tasks as Completed**: Users can update the status of tasks to Completed.
+   - **Delete Tasks**: Users can delete tasks by their ID.
 
-### 1. User Authentication
+3. **Persistent Storage**:
+   - User credentials and tasks are stored in files for persistence.
 
-#### Registration
-- **Function**: `register_user()`
-- **Steps**:
-  - Prompt the user to enter a username and password.
-  - Check if the username is unique.
-  - Hash the password for security.
-  - Store the username and hashed password in a file.
+4. **Interactive Menu**:
+   - A menu-driven interface allows users to manage tasks and log out.
 
-#### Login
-- **Function**: `login_user()`
-- **Steps**:
-  - Prompt the user for their username and password.
-  - Validate the credentials by comparing them with the stored data.
-  - Grant access to the task manager upon successful login.
+### Additional Features:
+1. **Budget Tracking**:
+   - Users can set a monthly budget and track expenses.
+   - The system warns users if they exceed their budget and shows the remaining balance.
 
-### 2. Task Management
+2. **Expense Management**:
+   - Users can save and load expenses from a CSV file.
+   - An interactive menu allows users to add expenses, view expenses, track the budget, save expenses, and exit the program.
 
-#### Add a Task
-- **Function**: `add_task()`
-- **Steps**:
-  - Prompt the user for a task description.
-  - Assign a unique task ID and set the status to Pending.
-  - Store the task in a file.
-  - Confirm that the task was added.
-
-#### View Tasks
-- **Function**: `view_tasks()`
-- **Steps**:
-  - Retrieve and display all tasks for the logged-in user.
-  - Show the task ID, description, and status (Pending or Completed).
-
-#### Mark a Task as Completed
-- **Function**: `mark_task_completed()`
-- **Steps**:
-  - Allow the user to select a task by its ID.
-  - Update its status to Completed.
-
-#### Delete a Task
-- **Function**: `delete_task()`
-- **Steps**:
-  - Allow the user to select a task by its ID.
-  - Delete it from their task list.
-
-### 3. Interactive Menu
-- **Function**: `menu()`
-- **Steps**:
-  - Display options: Add a Task, View Tasks, Mark a Task as Completed, Delete a Task, Logout.
-  - Call the corresponding function based on user choice.
-  - Loop back to the menu until the user logs out.
-
-### 4. Budget Management (Optional)
-
-#### Set and Track Budget
-- **Function**: `set_budget()`, `track_budget()`
-- **Steps**:
-  - Input a monthly budget.
-  - Calculate total expenses and compare with the budget.
-  - Display warnings or remaining balance.
-
-#### Save and Load Expenses
-- **Function**: `save_expenses()`, `load_expenses()`
-- **Steps**:
-  - Save expenses to a CSV file.
-  - Load expenses from the CSV file on program start.
-
-#### Interactive Menu
-- **Function**: `budget_menu()`
-- **Steps**:
-  - Display options: Add Expense, View Expenses, Track Budget, Save Expenses, Exit.
-  - Implement conditions for each menu selection.
